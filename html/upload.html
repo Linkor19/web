@@ -1,0 +1,68 @@
+<!-- <link rel="stylesheet" href="../css/style.css"> -->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Завантажити Фото</title>
+</head>
+<body>
+
+    <header>
+        <h1>Завантажте Ваше Фото</h1>
+        <p>Поділіться своєю творчістю зі світом.</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="categories.html">Категорії</a></li>
+            <li><a href="upload.html">Завантажити Власне</a></li>
+            <li><a href="about.html">Про Нас</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Форма Створення Нової Фотографії</h2>
+        
+        <form action="/submit-photo" method="POST" enctype="multipart/form-data">
+            
+            <p>
+                <label for="photo-title">Назва Фото:</label><br>
+                <input type="text" id="photo-title" name="photo_title" required>
+            </p>
+
+            <p>
+                <label for="photo-description">Опис Фото:</label><br>
+                <textarea id="photo-description" name="photo_description" rows="5" required></textarea>
+            </p>
+
+            <p>
+                <label for="photo-file">Виберіть Фото:</label><br>
+                <input type="file" id="photo-file" name="photo_file" accept="image/*" required>
+            </p>
+
+            <p>
+                <label for="photo-category">Категорія:</label><br>
+                <select id="photo-category" name="photo_category" required>
+                    <option value="" disabled selected>-- Оберіть --</option>
+                    <option value="nature">Природа</option>
+                    <option value="city">Місто</option>
+                    <option value="portraits">Портрети</option>
+                </select>
+            </p>
+
+            <p>
+                <button type="submit">Опублікувати</button>
+            </p>
+        </form>
+
+        <p><a href="index.html">Повернутись на головну</a></p>
+    </main>
+
+    <footer>
+        <p>Дотримуйтесь наших правил завантаження контенту.</p>
+    </footer>
+
+</body>
+</html>
