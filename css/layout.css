@@ -1,0 +1,117 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-base);
+}
+
+header, .main-nav {
+    background-color: var(--color-light);
+    width: 100%;
+    position: fixed; 
+    left: 0;
+    z-index: 1000;
+}
+
+header {
+    top: 0;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.main-nav {
+    top: 4.5rem; 
+    border-bottom: 1px solid var(--color-secondary);
+}
+
+
+header .container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: var(--spacing-base);
+}
+
+main {
+    padding: 2rem 0;
+    min-height: 80vh; 
+}
+
+footer {
+    background-color: var(--color-secondary);
+    color: var(--color-light);
+    text-align: center;
+    padding: var(--spacing-base);
+}
+
+
+.main-nav .container {
+    padding: 0; 
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex; 
+    gap: 1.5rem;
+    justify-content: flex-end; 
+    padding: 0.5rem var(--spacing-base);
+}
+
+.main-nav a {
+    font-weight: 600;
+    padding: 0.5rem;
+    display: block;
+}
+
+
+#latest-photos-list ul, 
+.category-photos ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    gap: 2rem;
+}
+
+#latest-photos-list ul li, 
+.category-photos ul li {
+    background-color: var(--color-light);
+    padding: var(--spacing-base);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    list-style: none;
+}
+
+.category-photos img {
+    width: 100%;
+    height: auto;
+    border-radius: calc(var(--border-radius) / 2);
+    margin-top: 0.5rem;
+}
+
+
+
+@media (max-width: 600px) {
+    
+    .main-nav {
+         top: 3.5rem; 
+    }
+    
+    h1 { font-size: 2rem; }
+    
+    .main-nav ul {
+        flex-direction: column; 
+        text-align: center;
+        gap: 0; 
+    }
+
+    #latest-photos-list ul, 
+    .category-photos ul {
+        grid-template-columns: 1fr;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
