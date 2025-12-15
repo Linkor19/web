@@ -1,3 +1,62 @@
 @import url('base.css');
 @import url('layout.css');
 @import url('components.css');
+
+.hidden-content {
+    display: none;
+    padding: 15px;
+    background: #f1f1f1;
+    border-left: 5px solid #1e6e44;
+    margin-top: 10px;
+}
+
+.hidden-content.visible {
+    display: block;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body.dark-theme {
+    background-color: #333;
+    color: #f4f4f4;
+}
+body.dark-theme header, 
+body.dark-theme nav, 
+body.dark-theme footer,
+body.dark-theme .category-photos ul li {
+    background-color: #444;
+    color: #fff;
+    border-color: #555;
+}
+body.dark-theme a {
+    color: #81c784;
+}
+
+.active-hover {
+    background-color: #1e6e44;
+    color: white !important;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.error-border {
+    border: 2px solid red !important;
+    background-color: #ffe6e6;
+}
+
+#theme-toggle-btn {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 2000;
+    padding: 8px 12px;
+    cursor: pointer;
+    background: #1e6e44;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}

@@ -8,18 +8,19 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <button id="theme-toggle-btn">Змінити тему</button>
 
     <header>
         <div class="container">
             <h1>Фотогалерея: Головна Сторінка</h1>
-            <p>Ласкаво просимо до найбільшої колекції української фотографії!</p>
+            <p class="text-highlight">Ласкаво просимо до найбільшої колекції української фотографії!</p>
         </div>
     </header>
 
     <nav>
         <div class="container">
             <h2>Меню</h2>
-            <ul>
+            <ul id="nav-menu">
                 <li><a href="index.html">Головна</a></li>
                 <li><a href="categories.html">Категорії</a></li>
                 <li><a href="upload.html">Завантажити Власне</a></li>
@@ -34,8 +35,15 @@
         <div class="container">
             <h2>Огляд Проєкту</h2>
             
-            <p>Наш проєкт — це відкрита платформа, де фотографи з усієї України можуть ділитися своїми роботами.</p>
+            <p class="text-highlight">Наш проєкт — це відкрита платформа, де фотографи з усієї України можуть ділитися своїми роботами.</p>
             
+            <div class="accordion-container" style="margin: 20px 0;">
+                <button id="accordion-btn" class="btn-primary">Дізнатися більше про проєкт</button>
+                <div id="accordion-content" class="hidden-content">
+                    <p>Тут розміщена додаткова інформація про історію створення платформи, наших партнерів та плани на майбутнє. Цей текст з'являється завдяки JavaScript.</p>
+                </div>
+            </div>
+
             <div id="latest-photos-list" class="category-photos">
                 <h3>Обрані фотографії</h3>
                 <ul>
@@ -57,9 +65,10 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Фотогалерея. Усі права захищені.</p>
+            <p id="footer-date">&copy; 2025 Фотогалерея. Усі права захищені.</p>
         </div>
     </footer>
 
+    <script src="../js/main.js"></script>
 </body>
 </html>

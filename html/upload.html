@@ -5,64 +5,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Завантажити Фото</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
+    <button id="theme-toggle-btn">Змінити тему</button>
+
     <header>
-        <h1>Завантажте Ваше Фото</h1>
-        <p>Поділіться своєю творчістю зі світом.</p>
+        <div class="container">
+            <h1>Завантажте Ваше Фото</h1>
+            <p>Поділіться своєю творчістю зі світом.</p>
+        </div>
     </header>
 
     <nav>
-        <ul>
-            <li><a href="index.html">Головна</a></li>
-            <li><a href="categories.html">Категорії</a></li>
-            <li><a href="upload.html">Завантажити Власне</a></li>
-            <li><a href="about.html">Про Нас</a></li>
-        </ul>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Головна</a></li>
+                <li><a href="categories.html">Категорії</a></li>
+                <li><a href="upload.html">Завантажити Власне</a></li>
+                <li><a href="about.html">Про Нас</a></li>
+            </ul>
+        </div>
     </nav>
 
     <main>
-        <h2>Форма Створення Нової Фотографії</h2>
-        
-        <form action="/submit-photo" method="POST" enctype="multipart/form-data">
+        <div class="container">
+            <h2>Форма Створення Нової Фотографії</h2>
             
-            <p>
-                <label for="photo-title">Назва Фото:</label><br>
-                <input type="text" id="photo-title" name="photo_title" required>
-            </p>
+            <form id="upload-form" enctype="multipart/form-data">
+                
+                <p>
+                    <label for="photo-title">Назва Фото:</label><br>
+                    <input type="text" id="photo-title" name="photo_title" required>
+                </p>
 
-            <p>
-                <label for="photo-description">Опис Фото:</label><br>
-                <textarea id="photo-description" name="photo_description" rows="5" required></textarea>
-            </p>
+                <p>
+                    <label for="photo-description">Опис Фото:</label><br>
+                    <textarea id="photo-description" name="photo_description" rows="5" required></textarea>
+                </p>
 
-            <p>
-                <label for="photo-file">Виберіть Фото:</label><br>
-                <input type="file" id="photo-file" name="photo_file" accept="image/*" required>
-            </p>
+                <p>
+                    <label for="photo-file">Виберіть Фото:</label><br>
+                    <input type="file" id="photo-file" name="photo_file" accept="image/*" required>
+                </p>
 
-            <p>
-                <label for="photo-category">Категорія:</label><br>
-                <select id="photo-category" name="photo_category" required>
-                    <option value="" disabled selected>-- Оберіть --</option>
-                    <option value="nature">Природа</option>
-                    <option value="city">Місто</option>
-                    <option value="portraits">Портрети</option>
-                </select>
-            </p>
+                <p>
+                    <label for="photo-category">Категорія:</label><br>
+                    <select id="photo-category" name="photo_category" required>
+                        <option value="" disabled selected>-- Оберіть --</option>
+                        <option value="nature">Природа</option>
+                        <option value="city">Місто</option>
+                        <option value="portraits">Портрети</option>
+                    </select>
+                </p>
 
-            <p>
-                <button type="submit">Опублікувати</button>
-            </p>
-        </form>
+                <p>
+                    <button type="submit" class="btn-primary">Опублікувати</button>
+                </p>
+            </form>
 
-        <p><a href="index.html">Повернутись на головну</a></p>
+            <div id="form-messages" style="margin-top: 20px;"></div>
+
+            <p><a href="index.html">Повернутись на головну</a></p>
+        </div>
     </main>
 
     <footer>
-        <p>Дотримуйтесь наших правил завантаження контенту.</p>
+        <div class="container">
+            <p id="footer-date">Дотримуйтесь наших правил завантаження контенту.</p>
+        </div>
     </footer>
-
+    
+    <script src="../js/main.js"></script>
 </body>
 </html>
